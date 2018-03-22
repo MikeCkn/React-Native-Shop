@@ -23,5 +23,14 @@ export const shop = StyleSheet.create({
 
     oneItem: {
         paddingBottom: 10,
+    },
+
+    itemName: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#157EFC',
+    },
+    itemPrice: {
+        fontSize: 12,
     }
 });

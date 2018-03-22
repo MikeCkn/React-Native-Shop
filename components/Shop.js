@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Container, Header, Content, Button, Text } from 'native-base';
+import React, {Component} from 'react';
+import {StyleSheet, View} from 'react-native';
+import {Container, Header, Content, Button, Text} from 'native-base';
 
-import { shop } from '../styles/stylesheet';
+import {shop} from '../styles/stylesheet';
 import Basket from './Basket';
 import Items from './Items';
 
@@ -11,8 +11,8 @@ export default class Shop extends Component {
         return (
             <View style={shop.containerItemsAndBasket}>
                 <Items/>
-                <Basket />
-            </View>    
+                <Basket/>
+            </View>
         );
     }
 }
