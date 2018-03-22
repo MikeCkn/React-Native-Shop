@@ -14,5 +14,14 @@ export const shop = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         paddingTop: 30,
+    },
+
+    titles: {
+        paddingBottom: 10,
+        fontSize: 20,
+    },
+
+    oneItem: {
+        paddingBottom: 10,
     }
 });

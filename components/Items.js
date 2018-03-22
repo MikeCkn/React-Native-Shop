@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import { shop } from '../styles/stylesheet';
+
 export default class Items extends Component {
   render() {
     return (
       <View>
-        <Text>ITEMS</Text>
+        <Text style={shop.titles}>ITEMS</Text>
         <View>{items.map(item=>
-          <View key={item.id}>
+          <View key={item.id} style={shop.oneItem}>
             <Text>Name: {item.name}</Text>
             <Text>Price: {item.price}</Text>
           </View>
