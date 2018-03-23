@@ -20,18 +20,18 @@ import {Shop, Basket} from './components';
 
 export default class App extends Component {
 
-state = {
-  basket: 0
-}
+  state = {
+    basket: 0
+  }
 
-addItemToBasket = (item) => {
-  this.setState({
-    basket: this.state.basket + item.price
-  })
-}
+  addItemToBasket = (item) => {
+    this.setState({
+      basket: this.state.basket + item.price
+    })
+  }
 
   render() {
-    
+
     return (
       <ScrollView>
         <Container style={app.container}>
@@ -58,12 +58,11 @@ addItemToBasket = (item) => {
                 uri: 'https://seeklogo.com/images/G/giuseppe-zanotti-design-logo-8EFECFF515-seeklogo.com.png'
               }}></Image>
               <Shop addItemToBasket={this.addItemToBasket}/>
-              <Basket basket={this.state.basket}/>
             </View>
           </Content>
           <Footer>
             <FooterTab>
-              <Button full></Button>
+              < Basket basket={this.state.basket}/>
             </FooterTab>
           </Footer>
         </Container>

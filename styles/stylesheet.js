@@ -8,8 +8,8 @@ export const app = StyleSheet.create({
     },
     container2: {
         flex: 1,
-        alignItems: 'center',
-}
+        alignItems: 'center'
+    }
 });
 
 export const shop = StyleSheet.create({
@@ -18,6 +18,13 @@ export const shop = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         paddingTop: 30
+    },
+
+    basket: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around'
     },
 
     titles: {

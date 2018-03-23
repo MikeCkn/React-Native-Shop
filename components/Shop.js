@@ -8,8 +8,6 @@ import Items from './Items';
 
 export default class Shop extends Component {
     render() {
-console.log(this.props)
-
         return (
             <View style={shop.containerItemsAndBasket}>
                 <Items addItemToBasket={this.props.addItemToBasket}/>

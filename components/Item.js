@@ -6,7 +6,6 @@ import {shop} from '../styles/stylesheet';
 
 export default class Item extends Component {
   render() {
-    console.log(this.props)
     return (
       <View>{items.map(item => <View key={item.id} style={shop.oneItem}>
           <Text style={shop.itemName}>{item.name}</Text>
@@ -21,7 +20,7 @@ export default class Item extends Component {
           }}></Image>
           <Text style={shop.itemPrice}>{item.price}
             €</Text>
-          <Button title='ADD' onPress={()=>this.props.addItemToBasket(item)}/>
+          <Button title='ADD' onPress={() => this.props.addItemToBasket(item)}/>
         </View>)}
       </View>
     )
