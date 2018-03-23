@@ -8,10 +8,11 @@ import Items from './Items';
 
 export default class Shop extends Component {
     render() {
+console.log(this.props)
+
         return (
             <View style={shop.containerItemsAndBasket}>
-                <Items/>
-                <Basket/>
+                <Items addItemToBasket={this.props.addItemToBasket}/>
             </View>
         );
     }

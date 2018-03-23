@@ -1,21 +1,28 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import React, {Component} from 'react';
+import {StyleSheet, View, Image, Button} from 'react-native';
+import {Text} from 'native-base';
 
-import { shop } from '../styles/stylesheet';
+import {shop} from '../styles/stylesheet';
 
 export default class Item extends Component {
   render() {
+    console.log(this.props)
     return (
-      <View>{items.map(item =>
-        <View key={item.id} style={shop.oneItem}>
+      <View>{items.map(item => <View key={item.id} style={shop.oneItem}>
           <Text style={shop.itemName}>{item.name}</Text>
-          <Image 
-            style = {{width: 50, height: 50}}
-            source = {{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}} >
-          </Image>
-          <Text style={shop.itemPrice}>{item.price} €</Text>
-        </View>
-      )}
+          <Image
+            style={{
+            width: 350,
+            height: 350,
+            resizeMode: 'contain'
+          }}
+            source={{
+            uri: item.url
+          }}></Image>
+          <Text style={shop.itemPrice}>{item.price}
+            €</Text>
+          <Button title='ADD' onPress={()=>this.props.addItemToBasket(item)}/>
+        </View>)}
       </View>
     )
   }
@@ -24,28 +31,50 @@ export default class Item extends Component {
 const items = [
   {
     id: 1,
-    name: "Blue",
-    price: 520,
-    url: 'http://1.bp.blogspot.com/-naRMvjVIpoc/UagIUerlmaI/AAAAAAAAAVM/NerDw4P8Y_w/s1600/Screen+Shot+2013-05-30+at+10.16.02+PM.png',
-  },
-  {
+    name: "Jimbo",
+    price: 995,
+    url: 'https://images.bergdorfgoodman.com/ca/2/product_assets/N/3/T/Y/X/BGN3TYX_mu.jpg'
+  }, {
     id: 2,
-    name: "Red",
+    name: "Truman",
     price: 950,
-  },
-  {
+    url: 'https://bergdorfgoodman.scene7.com/is/image/bergdorfgoodman/BGN4V1U_01_m?&wid=40' +
+        '0&height=500'
+  }, {
     id: 3,
-    name: "Yellow",
-    price: 95
-  },
-  {
+    name: "Skandy",
+    price: 595,
+    url: 'https://images.bergdorfgoodman.com/ca/2/product_assets/N/4/T/U/V/BGN4TUV_mu.jpg'
+
+  }, {
     id: 4,
-    name: "Green",
-    price: 25
-  },
-  {
+    name: "Guider",
+    price: 625,
+    url: 'https://images.bergdorfgoodman.com/ca/1/product_assets/N/4/V/1/T/BGN4V1T_mu.jpg'
+
+  }, {
     id: 5,
-    name: "Black",
-    price: 190
-  },
+    name: "Kriss",
+    price: 810,
+    url: 'https://images.bergdorfgoodman.com/ca/1/product_assets/N/4/U/B/N/BGN4UBN_mu.jpg'
+
+  }, {
+    id: 6,
+    name: "Blazer",
+    price: 450,
+    url: 'https://images.bergdorfgoodman.com/ca/1/product_assets/N/4/W/6/Z/BGN4W6Z_mu.jpg'
+
+  }, {
+    id: 7,
+    name: "Void",
+    price: 630,
+    url: 'https://images.bergdorfgoodman.com/ca/2/product_assets/N/3/J/N/X/BGN3JNX_mu.jpg'
+
+  }, {
+    id: 8,
+    name: "Arkangel",
+    price: 890,
+    url: 'https://images.bergdorfgoodman.com/ca/2/product_assets/N/3/J/N/9/BGN3JN9_mu.jpg'
+
+  }
 ];
